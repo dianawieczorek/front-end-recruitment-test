@@ -68,9 +68,9 @@
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <button action="button">Yeah, I want more bacon!</button>
+            <button onClick="addMoreBacon()" action="button">Yeah, I want more bacon!</button>
           </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="bacon">
             <img src="http://media.washtimes.com.s3.amazonaws.com/media/image/2015/02/23/bacon.jpg" alt="Bacon" style="width: 100%; height: 100%;">
           </section>
         </div>
@@ -143,6 +143,10 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
+      addMoreBacon = () => {
+        let image = document.getElementsByTagName("img")[0];
+        document.getElementById("bacon").appendChild(image.cloneNode(true));
+      }
     </script>
     <!-- Built with love using Web Starter Kit -->
   </body>
