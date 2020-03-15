@@ -13,12 +13,20 @@ test('credit card should be valid', () => {
   })).toBe(undefined);
 });
 
-// test('credit card cannot be empty', () => {
-//   expect(checkValid({
-//     other: ''
-//   })).toStrictEqual( {creditCardNumber: ["Credit card number can't be blank"]});
-// });
-//
+test('credit card cannot be empty', () => {
+  expect(checkValid({})).toStrictEqual( {
+    firstName: ["First name can't be blank"],
+    secondName: ["Second name can't be blank"],
+    email: ["Email can't be blank"],
+    country: ["Country can't be blank"],
+    postalCode: ["Postal code can't be blank"],
+    phoneNumber: ["Phone number can't be blank"],
+    creditCardNumber: ["Credit card number can't be blank"],
+    securityCode:["Security code can't be blank"],
+    expDate:["Exp date can't be blank"]
+  });
+});
+
 // test('credit card have to be length 16', () => {
 //   expect(checkValid({
 //     creditCardNumber: '4212345678912'
