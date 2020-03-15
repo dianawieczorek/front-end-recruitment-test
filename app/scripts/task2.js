@@ -1,4 +1,6 @@
-const validate = require("validate.js");
+// const validate = require("validate.js");
+// module.exports = checkValid;
+
 const validationRule = {
   firstName: {
     presence: true,
@@ -20,6 +22,10 @@ const validationRule = {
   },
   country: {
     presence: true,
+    length: {
+      minimum: 2,
+      message: "cannot be empty"
+    }
   },
   postalCode: {
     presence: true,
@@ -66,4 +72,37 @@ const validationRule = {
 function checkValid (objectToValidate){
   return validate(objectToValidate, validationRule)
 }
-module.exports = checkValid;
+
+
+function validateForm() {
+  let firstName = document.getElementById("fName");
+  let secondName = document.getElementById("sName");
+  let country = document.getElementById("country");
+  let email = document.getElementById("email");
+  let postalCode = document.getElementById("postalCode");
+  let phoneNumber = document.getElementById("phone");
+  let creditCardNumber = document.getElementById("cardNumber");
+  let securityCode = document.getElementById("securityCode");
+  let expDate = document.getElementById("expDate");
+  const toValidateInputs=
+    {
+      firstName: firstName.value,
+      secondName: secondName.value,
+      country: country.value,
+      email:email.value,
+      postalCode: postalCode.value,
+      phoneNumber: phoneNumber.value,
+      creditCardNumber: creditCardNumber.value,
+      securityCode: securityCode.value,
+      expDate:expDate.value
+    }
+  console.log(toValidateInputs)
+  const validResult = checkValid(toValidateInputs);
+  console.log(validResult)
+  if (validResult !== undefined){
+    alert(validResult)
+    return false;
+  }
+  alert("CORRECT!")
+  return true;
+}
