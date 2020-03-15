@@ -4,6 +4,11 @@ window.onload = function () {
   }));
 };
 
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
+
 const constraints = {
   creditCardNumber: {
     presence: true,
