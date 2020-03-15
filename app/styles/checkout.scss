@@ -2,12 +2,12 @@ html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #F2F2F2;
   max-width: 1000px;
 }
 
 form {
-  padding: 16px 50px
+  padding: 16px 50px;
+  background-color: #F2F2F2;
 }
 
 $inputBgColor: #FFF;
@@ -118,7 +118,7 @@ p {
   margin: 0 0 15px 0;
 }
 
-button {
+#purchaseButton {
   box-sizing: content-box;
   margin: 0;
   width: 93%;

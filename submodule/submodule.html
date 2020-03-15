@@ -64,6 +64,7 @@
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active">Bacon</a>
+          <a href="#checkout" class="mdl-layout__tab ">Checkout</a>
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -74,6 +75,9 @@
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="bacon">
             <img src="http://media.washtimes.com.s3.amazonaws.com/media/image/2015/02/23/bacon.jpg" alt="Bacon" style="width: 100%; height: 100%;">
           </section>
+        </div>
+        <div class="mdl-layout__tab-panel" id="checkout">
+
         </div>
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
@@ -147,7 +151,10 @@
       addMoreBacon = () => {
         let image = document.getElementsByTagName("img")[0];
         document.getElementById("bacon").appendChild(image.cloneNode(true));
-      }
+      };
+
+      fetch("checkout.html").then(data => data.text()).then(html=> document.getElementById("checkout").innerHTML=html);
+
     </script>
     <script src="scripts/task2.js"></script>
     <!-- Built with love using Web Starter Kit -->
