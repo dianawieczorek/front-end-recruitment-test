@@ -29,6 +29,7 @@ const validationRule = {
   phoneNumber: {
     presence: true,
     numericality: true,
+    length: {is:10}
   },
   creditCardNumber: {
     presence: true,
@@ -58,6 +59,7 @@ const validationRule = {
   },
   expDate: {
     presence: true,
+    length: {is: 4}
   }
 };
 

@@ -6,14 +6,14 @@ test('credit card should be valid', () => {
     email: 'email@email.com',
     country: 'Polska',
     postalCode: '10001',
-    phoneNumber: 2126929392,
+    phoneNumber: '2126929392',
     creditCardNumber: '4242424242424242',
     securityCode: '123',
-    expDate: "06/20"
+    expDate: "0620"
   })).toBe(undefined);
 });
 
-test('credit card cannot be empty', () => {
+test('inputs cannot be empty', () => {
   expect(checkValid({})).toStrictEqual( {
     firstName: ["First name can't be blank"],
     secondName: ["Second name can't be blank"],
@@ -27,8 +27,25 @@ test('credit card cannot be empty', () => {
   });
 });
 
-// test('credit card have to be length 16', () => {
-//   expect(checkValid({
-//     creditCardNumber: '4212345678912'
-//   })).toStrictEqual( {creditCardNumber: ["Credit card number is the wrong length (should be 16 characters)"]});
-// });
+test('credit card should be valid', () => {
+  expect(checkValid({
+    firstName: 'D',
+    secondName: 'W',
+    email: 'email',
+    country: 'Polska',
+    postalCode: '100',
+    phoneNumber: 2126929,
+    creditCardNumber: '4242424242424',
+    securityCode: '1',
+    expDate: "061"
+  })).toStrictEqual({
+    firstName:["First name must be at least 2 characters"],
+    secondName:["Second name must be at least 2 characters"],
+    email:["Email is not a valid email"],
+    postalCode:["Postal code is the wrong length (should be 5 characters)"],
+    phoneNumber:["Phone number has an incorrect length"],
+    creditCardNumber: ["Credit card number is the wrong length (should be 16 characters)"],
+    securityCode:["Security code is the wrong length (should be 3 characters)"],
+    expDate:["Exp date is the wrong length (should be 4 characters)"],});
+});
+
