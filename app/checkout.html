@@ -11,16 +11,16 @@
 <body>
 <div>
   <form>
-    <p>1 Personal Information</p>
+    <p><span class="Step">1</span> Personal Information</p>
     <div class="Flex">
       <div class="SeventyPercentBox">
         <div class="HalfWidthInput">
-          <label for="fname">First name</label>
-          <input type="text" id="fname" placeholder="Elon Musk">
+          <label for="fName">First name</label>
+          <input type="text" id="fName" placeholder="Elon">
         </div>
         <div class="HalfWidthInput">
-          <label for="sname">Last name</label>
-          <input type="text" id="sname" placeholder="Elon Musk">
+          <label for="sName">Last name</label>
+          <input type="text" id="sName" placeholder="Musk">
         </div>
         <div class="WholeWidthInput">
           <label for="email">Email</label>
@@ -29,12 +29,16 @@
         <div class="HalfWidthInput">
           <label for="country">Country</label>
           <select id="country" name="country">
-            <option>United States</option>
           </select>
         </div>
         <div class="HalfWidthInput">
+<<<<<<< HEAD
           <label for="pCode">Postal Code</label>
           <input type="number" id="pCode" placeholder="10001">
+=======
+          <label for="postalCode">Postal Code</label>
+          <input type="number" id="postalCode" placeholder="10001">
+>>>>>>> master
         </div>
         <div class="WholeWidthInput">
           <label for="phone">Phone Number</label>
@@ -44,24 +48,26 @@
       <div class="OrderWrapper">
         <p>Your Order</p>
         <div>Apple Watch Sport
-          <span>$580</span>
+          <span>$ 580</span>
         </div>
         <div>Modern Buckle
-          <span>$380</span>
+          <span>$ 380</span>
         </div>
-        <div>Total purchases
-          <span>$960</span>
+        <div class="DottedBorder">
+          <div>Total purchases
+            <span>$ 960</span>
+          </div>
+          <div>Estimated tax
+            <span>$ 0</span>
+          </div>
         </div>
-        <div>Estimated tax
-          <span>$0</span>
-        </div>
-        <div>Total
-          <span>$960</span>
+        <div><b>Total</b>
+          <span><b>$ 960</b></span>
         </div>
       </div>
     </div>
 
-    <p>2 Payments Details<i class="material-icons">
+    <p><span class="Step">2</span> Payments Details<i class="material-icons">
       lock
     </i></p>
     </i>
@@ -79,7 +85,7 @@
           <label>Expiration Date</label>
           <input type="text" id="expDate" placeholder="MM/YY">
         </div>
-        <button><i class="material-icons">
+        <button id="purchaseButton"><i class="material-icons">
           shopping_cart
         </i>COMPLETE PURCHASE
         </button>

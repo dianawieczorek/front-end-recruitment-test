@@ -2,21 +2,29 @@ html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
+  max-width: 1000px;
+}
+
+form {
+  padding: 16px 50px;
   background-color: #F2F2F2;
 }
 
 $inputBgColor: #FFF;
+$border-radius: 5px;
+$border-bottom: 2px solid #D9D9D9;
 
 @mixin standard-input-param {
   width: 100%;
-  padding: 5px;
+  padding: 7px;
   background-color: $inputBgColor;
 }
 
 div {
   box-sizing: border-box;
-  padding: 0 10px;
   overflow: hidden;
+  padding: 0;
+  margin: 0 1%;
 }
 
 .Flex {
@@ -25,24 +33,64 @@ div {
 }
 
 .SeventyPercentBox {
-  width: 70%;
+  width: 68%;
+  margin: 0 0 20px 10px;
+  padding-right: 10px;
 }
 
 .OrderWrapper {
-  width: 30%;
+  width: 32%;
   background-color: $inputBgColor;
-  border: 2px dotted #EAEAEA;
+  padding: 20px;
+  outline: 2px dotted #EAEAEA;
+  outline-offset: -8px;
+  border-radius: $border-radius;
+  border-bottom: $border-bottom;
+  margin: 0 0 4% 0;
+  font-size: 12px;
+  line-height: 1.5rem;
+
+}
+
+.OrderWrapper p {
+  font-size: 11px;
+  margin: 0 2%;
+}
+
+.DottedBorder {
+  margin: 20px 0;
+  padding: 10px 0;
+  border-top: 2px dotted #EAEAEA;
+  border-bottom: 2px dotted #EAEAEA;
+}
+
+span {
+  float: right;
+}
+
+.Step {
+  float: left;
+  background: #000;
+  border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin: 0 5px 0 0;
+  text-align: center;
+  width: 1.6em;
 }
 
 .WholeWidthInput {
-  width: 100%;
-  margin-bottom: 10px;
-  border-radius: 5px
+  width: 98%;
+  margin-bottom: 20px;
+  border-radius: $border-radius;
+  border-bottom: $border-bottom;
 }
 
 .HalfWidthInput {
   @extend .WholeWidthInput;
-  width: 50%;
+  width: 48%;
   display: block;
   float: left;
 }
@@ -50,34 +98,41 @@ div {
 label {
   @include standard-input-param;
   display: block;
+  font-weight: 800;
+  font-size: 12px;
+  color: #515356;
+  padding-bottom: 0;
 }
 
-
-input {
+input, select {
   @include standard-input-param;
   border: none;
+  padding-top: 2px;
+  font-size: 16px;
 }
 
 p {
   font-weight: 800;
+  font-size: 12px;
   text-transform: uppercase;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  margin: 15px 0 0 5px;
+#purchaseButton {
+  box-sizing: content-box;
+  margin: 0;
+  width: 93%;
+  padding: 18px;
   color: white;
   background-color: #6BD400;
   font-weight: 800;
-  font-size: 16px;
-  border-radius: 7px;
+  font-size: 12px;
+  border-radius: 5px;
   border-right: none;
   border-bottom: 2px solid #5CB204;
 }
 
 .material-icons {
-  font-size: 16px;
+  font-size: 12px;
   padding: 0 5px;
 }
