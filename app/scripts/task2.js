@@ -1,5 +1,4 @@
 const validate = require("validate.js");
-// import validate from 'validate.js'
 const validationRule = {
   creditCardNumber: {
     presence: true,
@@ -25,6 +24,6 @@ const validationRule = {
 };
 
 function checkValid (objectToValidate){
-  validate({creditCardNumber: objectToValidate}, validationRule)
+  return validate(objectToValidate, validationRule)
 }
 module.exports = checkValid;
