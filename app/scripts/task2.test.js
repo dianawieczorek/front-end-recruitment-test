@@ -1,4 +1,4 @@
-const xxx = require('./task2.js');
-test('adds 1 + 2 to equal 3', () => {
-  expect(xxx(1, 2)).toBe(3);
+const checkValid = require('./task2.js');
+test('credit card should be valid', () => {
+  expect(checkValid({creditCardNumber: ''})).toBe(undefined);
 });

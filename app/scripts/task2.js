@@ -1,15 +1,6 @@
-window.onload = function () {
-  document.getElementById("cardNumber").addEventListener("focusout", (e => {
-    console.log(validate({creditCardNumber: e.target.value}, constraints))
-  }));
-};
-
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;
-
-const constraints = {
+const validate = require("validate.js");
+// import validate from 'validate.js'
+const validationRule = {
   creditCardNumber: {
     presence: true,
     format: {
@@ -31,4 +22,9 @@ const constraints = {
       return false;
     }
   }
+};
+
+function checkValid (objectToValidate){
+  validate({creditCardNumber: objectToValidate}, validationRule)
 }
+module.exports = checkValid;
