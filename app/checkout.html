@@ -10,7 +10,7 @@
 </head>
 <body>
 <div>
-  <form onsubmit="return validateForm()">
+  <!--<form onsubmit="return validateForm()">-->
     <p><span class="Step">1</span> Personal Information</p>
     <div class="Flex">
       <div class="SeventyPercentBox">
@@ -80,14 +80,13 @@
           <label>Expiration Date</label>
           <input type="text" id="expDate" placeholder="MM/YY">
         </div>
-        <button id="purchaseButton"><i class="material-icons">
+        <button id="purchaseButton" onClick="validateForm()"><i class="material-icons">
           shopping_cart
         </i>COMPLETE PURCHASE
         </button>
       </div>
     </div>
-  </form>
+  <!--</form>-->
 </div>
-
 </body>
 </html>

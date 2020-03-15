@@ -96,13 +96,13 @@ function validateForm() {
       securityCode: securityCode.value,
       expDate:expDate.value
     }
-  console.log(toValidateInputs)
   const validResult = checkValid(toValidateInputs);
-  console.log(validResult)
+
   if (validResult !== undefined){
-    alert(validResult)
+
+    alert(Object.keys(validResult).map(k => validResult[k]).join('\n'));
     return false;
   }
-  alert("CORRECT!")
+  alert("CORRECT!");
   return true;
 }
