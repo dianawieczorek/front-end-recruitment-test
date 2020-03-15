@@ -1,14 +1,14 @@
-html, body {
+%html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
-  max-width: 1000px;
 }
 
-form {
+.Form {
+  max-width: 1000px;
   padding: 16px 50px;
   background-color: #F2F2F2;
-}
+
 
 $inputBgColor: #FFF;
 $border-radius: 5px;
