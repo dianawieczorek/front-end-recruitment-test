@@ -1,5 +1,35 @@
 const validate = require("validate.js");
 const validationRule = {
+  firstName: {
+    presence: true,
+    length: {
+      minimum: 2,
+      message: "must be at least 2 characters"
+    }
+  },
+  secondName: {
+    presence: true,
+    length: {
+      minimum: 2,
+      message: "must be at least 2 characters"
+    }
+  },
+  email: {
+    presence: true,
+    email: true
+  },
+  country: {
+    presence: true,
+  },
+  postalCode: {
+    presence: true,
+    numericality: true,
+    length: {is:5}
+  },
+  phoneNumber: {
+    presence: true,
+    numericality: true,
+  },
   creditCardNumber: {
     presence: true,
     format: {
@@ -20,6 +50,14 @@ const validationRule = {
       // Unknown card, don't validate length
       return false;
     }
+  },
+  securityCode: {
+    presence: true,
+    numericality: true,
+    length: {is: 3}
+  },
+  expDate: {
+    presence: true,
   }
 };
 
