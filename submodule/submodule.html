@@ -64,7 +64,7 @@
     </div>
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
       <a href="#overview" class="mdl-layout__tab is-active">Bacon</a>
-      <a href="#checkout" class="mdl-layout__tab ">Checkout</a>
+      <a href="#checkout" class="mdl-layout__tab">Checkout</a>
     </div>
   </header>
   <main class="mdl-layout__content">
@@ -156,15 +156,21 @@
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-XXXXX-X', 'auto');
   ga('send', 'pageview');
+
   addMoreBacon = () => {
     let image = document.getElementsByTagName("img")[0];
     document.getElementById("bacon").appendChild(image.cloneNode(true));
   };
 
   fetch("checkout.html").then(data => data.text()).then(html => document.getElementById("checkout").innerHTML = html);
-  fetch("countrydropdown.html").then(data => data.text()).then(html=>document.getElementById("country").innerHTML =html);
+  fetch("countrydropdown.html").then(data => data.text()).then(html => document.getElementById("country").innerHTML = html);
 </script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 <script src="scripts/task2.js"></script>
+<!--<script>-->
+
+<!--</script>-->
 <!-- Built with love using Web Starter Kit -->
 </body>
+
 </html>
